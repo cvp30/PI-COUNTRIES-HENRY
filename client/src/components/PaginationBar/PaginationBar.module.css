@@ -1,0 +1,20 @@
+.PaginationBar, .PagesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.PaginationBar img{
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.PaginationBar img:hover {
+    box-shadow: 0px 0px 7px 2px #076ebc;
+}
+
+.PagesContainer p {
+    font-size: 24px;
+}

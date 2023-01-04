@@ -1,0 +1,36 @@
+.SearchBar {
+    position: relative;
+    display: flex;
+}
+
+
+.SearchBar input {
+    position: relative;
+    padding: 0px 5px;
+    border: none;
+    border-bottom: 2px solid #065592;
+    background: rgba(0, 0, 0);
+    height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+}
+
+.SearchBar label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 14px;
+    /* color: #076ebc; */
+    color: #5f8db0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.SearchBar input:focus ~ label,
+.SearchBar input:not(:placeholder-shown) ~ label {
+    color: white;
+    top: -10px;
+    font-size: 11px;
+    
+}
