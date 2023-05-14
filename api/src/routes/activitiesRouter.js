@@ -1,10 +1,10 @@
-const { Router } = require("express");
-const validateActivity = require("../middlewares");
-const { createActivity, getActivities } = require("../controllers/activitiesController");
+import { Router } from "express";
+import { validateActivity } from "../middlewares/index.js"
+import { createActivity, getActivities } from "../controllers/ActivitiesController.js";
 
 const activitiesRouter = Router();
 
 activitiesRouter.post("/", validateActivity, createActivity);
 activitiesRouter.get("/", getActivities);
 
-module.exports = activitiesRouter;
+export default activitiesRouter;

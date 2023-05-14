@@ -1,43 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  html {
+    font-family: 'Alkatra', cursive;
+    background: #1e1f29;
+  }
+
+  * {
+    color: white;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  color: white;  
-  text-decoration: none;
-  list-style: none;
-  font-family: Georgia, serif;
-}
-
-
-
-body {
-  background-image: url(./assets/fondo.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(43, 42, 42, 0.841);
-  box-shadow: 0 0 1px rgb(32, 32, 32);
-}
+@tailwind components;
+@tailwind utilities;

@@ -1,9 +1,9 @@
-const { Router } = require("express");
-const { getCountries, getCountry } = require("../controllers/countriesController");
+import { Router } from "express";
+import { getCountries, getCountry } from "../controllers/countriesController.js";
 
 const countriesRouter = Router();
 
-countriesRouter.get("/", getCountries);
-countriesRouter.get("/:id",getCountry)
+countriesRouter.get('/', getCountries);
+countriesRouter.get('/:id', getCountry);
 
-module.exports = countriesRouter;
+export default countriesRouter;

@@ -1,6 +1,7 @@
-const { Country, Activity } = require("../db");
+import { Country } from "../models/Country.js";
+import { Activity } from "../models/Activity.js";
 
-const createActivity = async (req, res) => {
+export const createActivity = async (req, res) => {
   const { name, difficulty, duration, season, idCountries } = req.body;
 
   try {
@@ -13,7 +14,6 @@ const createActivity = async (req, res) => {
 
     idCountries.forEach(async id => {
       const country = await Country.findByPk(id);
-      // if(!country) return res.status(404).json({error: "Country not found"});
       await newActivity.addCountry(country);
     })
     return res.json("activity created!!!");
@@ -23,12 +23,12 @@ const createActivity = async (req, res) => {
   }
 }
 
-const getActivities = async(req, res) => {
+export const getActivities = async (req, res) => {
   try {
     const allActivities = await Activity.findAll({
       include: {
         model: Country,
-        attributes: ['id', 'name', 'continent', 'flag', 'population' ]
+        attributes: ['id', 'name', 'continent', 'flag', 'population']
       }
     });
 
@@ -37,9 +37,4 @@ const getActivities = async(req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-}
-
-module.exports = {
-  createActivity,
-  getActivities
 }
