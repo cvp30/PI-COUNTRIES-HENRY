@@ -1,14 +1,4 @@
 
-// {
-//   "name": "act1",
-//   "difficulty":3,
-//   "duration":3,
-//   "season":"Summer",
-// }
-// import Summer from "../assets/seasons/Summer.png"
-// import Autumn from "../assets/seasons/Autumn.png"
-// import Spring from "../assets/seasons/Spring.png"
-// import Winter from "../assets/seasons/Winter.png"
 import { Autumn, Clock, Summer, Spring, Winter } from "../icons"
 
 export const ActivityCard = ({ name, difficulty, duration, season }) => {

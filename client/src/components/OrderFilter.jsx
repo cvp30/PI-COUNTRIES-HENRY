@@ -30,7 +30,7 @@ export const OrderFilter = () => {
   }
 
   return (
-    <select onChange={handleOrder} className="drop-shadow-icon tracking-wider px-2 outline-none bg-dark text-[white] rounded-md ">
+    <select defaultValue={"1"} onChange={handleOrder} className="drop-shadow-icon tracking-wider px-2 outline-none bg-dark text-[white] rounded-md ">
       <option value="1">by Name(asc)</option>
       <option value="2">by Name(desc)</option>
       <option value="3">by population(asc)</option>

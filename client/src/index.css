@@ -23,6 +23,12 @@
   * {
     color: white;
   }
+
+  .number::-webkit-outer-spin-button,
+  .number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
 }
 
 @tailwind components;

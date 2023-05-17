@@ -5,6 +5,7 @@ import { Activities } from '../Pages/Activities';
 
 import { createBrowserRouter } from 'react-router-dom';
 import { getDetailCountry } from '../utils';
+import { ActivityForm } from '../Pages/ActivityForm';
 
 
 export const router = createBrowserRouter([
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: 'activities',
         element: <Activities />,
+      },
+      {
+        path: 'new-activity',
+        element: <ActivityForm />,
       }
     ]
   }
