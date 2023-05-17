@@ -21,8 +21,8 @@ export const Activities = () => {
   }, [activities.length, dispatch])
 
   return (
-    <section className="w-full h-full flex flex-col gap-8">
-      <div className="w-full flex gap-3">
+    <section className="w-[65rem] h-full flex flex-col gap-8">
+      <div className="w-full flex gap-3 p-2 overflow-x-auto">
         {
           activities.map(activity => {
             return (
@@ -40,7 +40,7 @@ export const Activities = () => {
         }
       </div>
 
-      <div className="w-full flex gap-3">
+      <div className="w-full flex gap-3 overflow-x-scroll">
         {
           countriesList.map(country => {
             return (

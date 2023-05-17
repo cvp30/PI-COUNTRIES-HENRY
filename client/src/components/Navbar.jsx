@@ -26,7 +26,7 @@ export const Navbar = () => {
 
 
   return (
-    <nav className="w-full h-full p-4 flex flex-col gap-5">
+    <nav className="w-full h-full p-4 flex flex-col gap-5 ">
 
 
       <Link to="/">

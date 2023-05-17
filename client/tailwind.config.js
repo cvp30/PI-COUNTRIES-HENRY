@@ -17,7 +17,6 @@ export default {
     },
     colors: {
       'dark': '#1e1f29',
-      // 'sky': '#0099ff',
       'silver': '#e6e6e6',
       'red': '#d10024',
       'white': 'white',

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { validate } from "../utils";
 import { postAxios } from "../lib/axios";
 import { useNavigate } from "react-router-dom";
-
+import confetti from "canvas-confetti";
 
 export const ActivityForm = () => {
   const navigate = useNavigate();
@@ -58,10 +58,24 @@ export const ActivityForm = () => {
     }
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     if (!Object.keys(error).length) {
-      alert(await postAxios('http://localhost:3001/activities', input));
-      navigate('/activities');
+      await postAxios('http://localhost:3001/activities', input)
+        .then(() => {
+          confetti({
+            particleCount: 100,
+            spread: 100,
+            origin: {
+              x: 0.6,
+              y: 0.8
+            }
+          });
+          setTimeout(() => {
+            navigate('/activities');
+          }, 3000)
+        })
+
     }
     else {
       alert("error")

@@ -5,5 +5,5 @@ export const getAxios = async (url) => {
 }
 
 export const postAxios = async (url, postRequest) => {
-  return await axios.post(url, postRequest).then(res => res.data);
+  return await axios.post(url, postRequest);
 }
