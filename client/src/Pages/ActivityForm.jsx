@@ -111,7 +111,7 @@ export const ActivityForm = () => {
 
 
 
-        <div className="w-full h-32 flex">
+        <div className="w-full md:h-32 h-fit flex md:flex-row md:flex-wrap flex-col items-center justify-center gap-10">
           <div className=" w-1/3 h-full flex">
 
             <div className="w-1/2 flex flex-col items-center justify-center gap-4">
@@ -132,7 +132,7 @@ export const ActivityForm = () => {
 
           </div>
 
-          <div className="w-1/3 h-full flex justify-center items-center gap-10 border-l-2 border-dashed border-[#6b6b6b]">
+          <div className="w-1/3 h-full flex justify-center items-center gap-10 md:border-l-2 md:border-dashed border-[#6b6b6b]">
             <label className="capitalize opacity-70">season:</label>
             <select
               name="season"
@@ -146,7 +146,7 @@ export const ActivityForm = () => {
             </select>
           </div>
 
-          <div className="w-1/3 relative flex justify-center items-center gap-3 border-l-2 border-dashed border-[#6b6b6b] ">
+          <div className="w-1/3 relative flex justify-center items-center gap-3 md:border-l-2 md:border-dashed border-[#6b6b6b] ">
             <label className="w-fit tracking-wider opacity-70">duration (hrs):</label>
 
             <div className="w-fit h-10 flex justify-center items-center gap-4">

@@ -37,7 +37,7 @@ export const CountryDetail = () => {
       <div className="w-full flex flex-col">
         <h2 className="text-sky capitalize">activities:</h2>
 
-        <div className="w-full flex glex-wrap gap-4">
+        <div className="w-full flex gap-4 overflow-x-scroll">
           {
             !country.activities.length ?
               <p>No Activities</p>

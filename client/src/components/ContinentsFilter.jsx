@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 import { filterByContinent, restoreInitialState } from "../redux/actions";
 import { Next } from "../icons";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ContinentsFilter = () => {
 
@@ -22,7 +22,7 @@ export const ContinentsFilter = () => {
   }
 
   return (
-    <div className="w-full h-fit flex flex-col gap-3">
+    <div className="w-11/12 md:w-full h-fit flex flex-col gap-3">
       <button onClick={handleAllContinents} className="flex items-center justify-between group">
         <h2 className="capitalize group-hover:drop-shadow-icon transition-all duration-300 ease-in-out">all continents</h2>
         <Next className="h-6 w-6 group-hover:drop-shadow-icon transition-all duration-300 ease-in-out" />

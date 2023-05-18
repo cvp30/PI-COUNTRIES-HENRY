@@ -18,8 +18,14 @@ export const SearchBar = () => {
 
   return (
 
-    <form onSubmit={handleSubmit} className="drop-shadow-icon" >
-      <input type="text" name="name" placeholder="search country..." autoComplete="off" className="text-dark outline-0 p-1 px-2 rounded-md w-full" />
+    <form onSubmit={handleSubmit} className="drop-shadow-icon w-5/6 md:w-full" >
+      <input
+        type="text"
+        name="name"
+        placeholder="search country..."
+        autoComplete="off"
+        className="text-dark outline-0 p-1 px-2 rounded-md w-full"
+      />
     </form>
   )
 }
