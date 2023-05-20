@@ -1,8 +1,8 @@
-import { Country } from "../models/Country.js";
-import { Activity } from "../models/Activity.js";
-import { getCountriesFound, getAllCountries } from "../utils/index.js";
+const Country = require("../models/Country.js");
+const Activity = require("../models/Activity.js");
+const { getCountriesFound, getAllCountries } = require("../utils/index.js");
 
-export const getCountries = async (req, res) => {
+const getCountries = async (req, res) => {
   try {
     const { name } = req.query;
 
@@ -18,7 +18,7 @@ export const getCountries = async (req, res) => {
   }
 }
 
-export const getCountry = async (req, res) => {
+const getCountry = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -31,4 +31,9 @@ export const getCountry = async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
+}
+
+module.exports = {
+  getCountries,
+  getCountry
 }

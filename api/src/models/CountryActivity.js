@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../database/database.js";
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database/database.js");
 
-export const CountryActivity = sequelize.define('country_activity', {
+const CountryActivity = sequelize.define('country_activity', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -15,3 +15,5 @@ const { country, activity } = sequelize.models;
 
 country.belongsToMany(activity, { through: CountryActivity });
 activity.belongsToMany(country, { through: CountryActivity });
+
+module.exports = CountryActivity;

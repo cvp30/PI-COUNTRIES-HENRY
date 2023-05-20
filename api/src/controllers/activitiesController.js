@@ -1,7 +1,8 @@
-import { Country } from "../models/Country.js";
-import { Activity } from "../models/Activity.js";
 
-export const createActivity = async (req, res) => {
+const Country = require("../models/Country.js");
+const Activity = require("../models/Activity.js");
+
+const createActivity = async (req, res) => {
   const { name, difficulty, duration, season, idCountries } = req.body;
 
   try {
@@ -23,7 +24,7 @@ export const createActivity = async (req, res) => {
   }
 }
 
-export const getActivities = async (req, res) => {
+const getActivities = async (req, res) => {
   try {
     const allActivities = await Activity.findAll({
       include: {
@@ -37,4 +38,9 @@ export const getActivities = async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
+}
+
+module.exports = {
+  createActivity,
+  getActivities,
 }

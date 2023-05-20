@@ -1,7 +1,7 @@
-import { Router } from "express";
+const { Router } = require("express");
 
-import countriesRouter from "./CountriesRouter.js";
-import activitiesRouter from "./ActivitiesRouter.js";
+const countriesRouter = require("./CountriesRouter.js");
+const activitiesRouter = require("./ActivitiesRouter.js");
 
 const router = Router();
 
@@ -9,4 +9,4 @@ router.use("/countries", countriesRouter);
 router.use("/activities", activitiesRouter);
 
 
-export default router;
+module.exports = router;

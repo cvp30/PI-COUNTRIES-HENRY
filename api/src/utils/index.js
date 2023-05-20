@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { Country } from '../models/Country.js';
-import { Op } from 'sequelize';
+const axios = require('axios');
+const Country = require('../models/Country.js');
+const { Op } = require('sequelize');
 
-export const loadAllCountries = async () => {
+const loadAllCountries = async () => {
   const apiCountries = await axios.get("https://restcountries.com/v3.1/all")
     .then(response => response.data);
 
@@ -22,7 +22,7 @@ export const loadAllCountries = async () => {
   Country.bulkCreate(countries);
 }
 
-export const getAllCountries = async () => {
+const getAllCountries = async () => {
   const attributes = ['id', 'name', 'continent', 'flag', 'population'];
   const order = [['name', 'ASC']];
 
@@ -32,7 +32,7 @@ export const getAllCountries = async () => {
   })
 }
 
-export const getCountriesFound = async (name) => {
+const getCountriesFound = async (name) => {
 
   const attributes = ['id', 'name', 'continent', 'flag', 'population'];
   const order = [['name', 'ASC']];
@@ -44,4 +44,10 @@ export const getCountriesFound = async (name) => {
       name: { [Op.iLike]: `%${name}%` }
     }
   })
+}
+
+module.exports = {
+  loadAllCountries,
+  getAllCountries,
+  getCountriesFound
 }

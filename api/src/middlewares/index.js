@@ -1,4 +1,4 @@
-export const validateActivity = (req, res, next) => {
+const validateActivity = (req, res, next) => {
   const { name, difficulty, duration, season, idCountries } = req.body;
 
   if (!name) return res.status(400).json({ error: "missing name" });
@@ -8,3 +8,7 @@ export const validateActivity = (req, res, next) => {
   if (!idCountries) return res.status(400).json({ error: "missing countries" });
   next();
 };
+
+module.exports = {
+  validateActivity
+}

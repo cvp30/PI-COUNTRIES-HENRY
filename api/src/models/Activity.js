@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../database/database.js";
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database/database.js");
 
-export const Activity = sequelize.define('activity', {
+const Activity = sequelize.define('activity', {
   name: {
     type: DataTypes.STRING,
     unique: true,
@@ -28,3 +28,5 @@ export const Activity = sequelize.define('activity', {
     allowNull: false,
   },
 })
+
+module.exports = Activity;

@@ -1,28 +1,25 @@
-import Sequelize from 'sequelize';
-const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } = process.env;
+require("dotenv").config();
+const { Sequelize } = require('sequelize');
+const { DB_DEPLOY } = process.env;
 
 // const sequelize = new Sequelize('database', 'username', 'password', {
 //   host: 'localhost',
 //   dialect: /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
 // });
 
-// TIPO_DB :// USER   :     PASSWORD        @ HOST      : PORT / DB_NAME
-// postgresql://postgres:iInLVkQfeKlOL0jcKb0C@containers-us-west-91.railway.app:7762/railway
-
-export const sequelize = new Sequelize(
-  DB_NAME,
-  DB_USER,
-  DB_PASSWORD,
+const sequelize = new Sequelize(
+  DB_DEPLOY,
   {
-    host: DB_HOST,
-    port: DB_PORT,
-    dialect: "postgres",
     native: false,
+    logging: false,
     define: {
       freezeTableName: true,
       timestamps: false,
     }
   }
+  // "countries",
+  // "postgres",
+  // "1111",
   // {
   //   host: "localhost",
   //   dialect: "postgres",
@@ -33,3 +30,7 @@ export const sequelize = new Sequelize(
   //   }
   // }
 )
+
+module.exports = {
+  sequelize
+}

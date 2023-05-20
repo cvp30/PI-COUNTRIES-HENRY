@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../database/database.js";
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database/database.js");
 
-export const Country = sequelize.define('country', {
+const Country = sequelize.define('country', {
   id: {
     type: DataTypes.STRING(3),
     primaryKey: true,
@@ -40,3 +40,5 @@ export const Country = sequelize.define('country', {
     type: DataTypes.INTEGER
   }
 })
+
+module.exports = Country;

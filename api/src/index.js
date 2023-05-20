@@ -1,11 +1,11 @@
-import server from './app.js'
-import { sequelize } from './database/database.js';
+const server = require('./app.js');
+const { sequelize } = require('./database/database.js');
 
-import "./models/Country.js"
-import "./models/Activity.js"
-import "./models/CountryActivity.js"
+require("./models/Country.js");
+require("./models/Activity.js");
+require("./models/CountryActivity.js");
 
-import { loadAllCountries } from './utils/index.js';
+const { loadAllCountries } = require('./utils/index.js');
 
 async function main() {
   try {

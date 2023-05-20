@@ -1,6 +1,6 @@
-import express from 'express';
-import router from './routes/index.js';
-import morgan from 'morgan'
+const express = require('express');
+const router = require('./routes/index.js');
+const morgan = require('morgan');
 
 const server = express();
 
@@ -16,4 +16,4 @@ server.use((req, res, next) => {
 server.use('/', router);
 
 
-export default server;
+module.exports = server;
