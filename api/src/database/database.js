@@ -6,7 +6,7 @@ const { DB_DEPLOY } = process.env;
 //   host: 'localhost',
 //   dialect: /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
 // });
-
+// postgresql://postgres:iInLVkQfeKlOL0jcKb0C@containers-us-west-91.railway.app:7762/railway
 const sequelize = new Sequelize(
   DB_DEPLOY,
   {
@@ -17,6 +17,23 @@ const sequelize = new Sequelize(
       timestamps: false,
     }
   }
+
+  // "railway",
+  // "postgres",
+  // "iInLVkQfeKlOL0jcKb0C",
+
+  // {
+  //   host: "containers-us-west-91.railway.app",
+  //   port: 7762,
+  //   dialect: "postgres",
+  //   native: false,
+  //   logging: false,
+  //   define: {
+  //     freezeTableName: true,
+  //     timestamps: false,
+  //   }
+  // }
+
   // "countries",
   // "postgres",
   // "1111",

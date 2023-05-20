@@ -15,7 +15,7 @@ export const restoreInitialState = () => {
 
 export const getAllCountries = () => {
   return async function (dispatch) {
-    const data = await getAxios('http://localhost:3001/countries');
+    const data = await getAxios('/countries');
 
     return dispatch({
       type: GET_ALL_COUNTRIES,
@@ -26,7 +26,7 @@ export const getAllCountries = () => {
 
 export const getAllActivities = () => {
   return async function (dispatch) {
-    const data = await getAxios('http://localhost:3001/activities');
+    const data = await getAxios('/activities');
 
     return dispatch({
       type: GET_ALL_ACTIVITIES,
@@ -44,7 +44,7 @@ export const filterByContinent = (continent) => {
 
 export const filterByName = (name) => {
   return async function (dispatch) {
-    const data = await getAxios(`http://localhost:3001/countries?name=${name}`);
+    const data = await getAxios(`/countries?name=${name}`);
 
     return dispatch({
       type: FILTER_BY_NAME,
@@ -77,7 +77,7 @@ export const SortCountries = (sortOptions) => {
 
 // export const getAllActivities = () => {
 //   return async function (dispatch) {
-//     const data = await getAxios('http://localhost:3001/activities');
+//     const data = await getAxios('/activities');
 
 //     return dispatch({
 //       type: GET_ALL_ACTIVITIES,
@@ -88,7 +88,7 @@ export const SortCountries = (sortOptions) => {
 
 // export const getAllCountries = () => {
 //   return async function (dispatch) {
-//     const data = await getAxios('http://localhost:3001/countries');
+//     const data = await getAxios('/countries');
 
 //     return dispatch({
 //       type: GET_ALL_COUNTRIES,
@@ -99,7 +99,7 @@ export const SortCountries = (sortOptions) => {
 
 // export const filterByName = (name) => {
 //   return async function (dispatch) {
-//     const data = await getAxios(`http://localhost:3001/countries?name=${name}`);
+//     const data = await getAxios(`/countries?name=${name}`);
 
 //     return dispatch({
 //       type: FILTER_BY_NAME,
