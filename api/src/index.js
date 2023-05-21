@@ -4,8 +4,8 @@ const { loadAllCountries } = require('./utils/index.js');
 require("./models/Country.js");
 require("./models/Activity.js");
 require("./models/CountryActivity.js");
-require("dotenv").config();
-const { PORT } = process.env;
+// require("dotenv").config();
+// const { PORT } = process.env;
 
 async function main() {
   try {
@@ -13,8 +13,8 @@ async function main() {
 
       loadAllCountries();
 
-      server.listen(PORT, () => {
-        console.log('Server is listening on port %s', process.env.PORT);
+      server.listen(3001, () => {
+        console.log('Server is listening on port %s', 3001);
       });
     })
   } catch (error) {
