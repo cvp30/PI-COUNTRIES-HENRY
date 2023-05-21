@@ -1,5 +1,5 @@
-const server = require('./app.js');
-const { sequelize } = require('./database/database.js');
+const server = require('./app');
+const { sequelize } = require("./database/database.js");
 const { loadAllCountries } = require('./utils/index.js');
 require("./models/Country.js");
 require("./models/Activity.js");
