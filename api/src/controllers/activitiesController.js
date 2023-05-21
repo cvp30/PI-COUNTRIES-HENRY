@@ -1,6 +1,6 @@
 
-const Country = require("../models/Country.js");
-const Activity = require("../models/Activity.js");
+const Country = require("../models/Country");
+const Activity = require("../models/Activity");
 
 const createActivity = async (req, res) => {
   const { name, difficulty, duration, season, idCountries } = req.body;

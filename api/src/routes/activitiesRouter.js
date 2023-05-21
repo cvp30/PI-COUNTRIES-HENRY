@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const { validateActivity } = require("../middlewares/index.js")
-const { createActivity, getActivities } = require("../controllers/ActivitiesController.js");
+const { validateActivity } = require("../middlewares/index")
+const { createActivity, getActivities } = require("../controllers/ActivitiesController");
 
 const activitiesRouter = Router();
 
