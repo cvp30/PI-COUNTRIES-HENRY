@@ -4,6 +4,8 @@ const morgan = require('morgan');
 
 const server = express();
 
+server.name = 'API';
+
 server.use(express.json());
 server.use(morgan('dev'))
 server.use((req, res, next) => {
