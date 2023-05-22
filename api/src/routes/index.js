@@ -1,6 +1,6 @@
-const { Router } = require("express");
+const Router = require("express");
 
-const countriesRouter = require("./countriesRouter/index");
+const countriesRouter = require('./CountriesRouter');
 // const activitiesRouter = require("./ActivitiesRouter.js");
 
 const router = Router();
