@@ -1,6 +1,6 @@
 const server = require('./src/app');
 const { sequelize } = require('./src/database/database');
-// const { loadAllCountries } = require('./src/utils/index');
+const { loadAllCountries } = require('./src/utils/index');
 require('./src/models/Activity');
 require('./src/models/Country');
 require('./src/models/CountryActivity');
@@ -11,7 +11,7 @@ async function main() {
   try {
     await sequelize.sync({ force: true }).then(() => {
 
-      // loadAllCountries();
+      loadAllCountries();
 
       server.listen(PORT, () => {
         console.log('Server is listening on port %s', PORT);
