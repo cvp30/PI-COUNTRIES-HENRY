@@ -7,14 +7,16 @@ require('./src/models/CountryActivity');
 require("dotenv").config();
 const { PORT } = process.env;
 
+const port = PORT || 3000;
+
 async function main() {
   try {
     await sequelize.sync({ force: true }).then(() => {
 
       loadAllCountries();
 
-      server.listen(PORT, () => {
-        console.log('Server is listening on port %s', PORT);
+      server.listen(port, () => {
+        console.log('Server is listening on port %s', port);
       });
     })
   } catch (error) {
