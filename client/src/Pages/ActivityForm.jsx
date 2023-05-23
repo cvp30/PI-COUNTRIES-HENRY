@@ -61,7 +61,7 @@ export const ActivityForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!Object.keys(error).length) {
-      await postAxios('http://localhost:3001/activities', input)
+      await postAxios('/activities', input)
         .then(() => {
           confetti({
             particleCount: 100,
