@@ -1,6 +1,6 @@
 import axios from 'axios';
-// axios.defaults.baseURL = "https://proyecto-final-production-e80c.up.railway.app/";
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://apicountries.up.railway.app/";
+// axios.defaults.baseURL = "http://localhost:3001/";
 
 export const getAxios = async (url) => {
   return await axios.get(url).then(res => res.data);
