@@ -1,4 +1,5 @@
-// const Country = require("../models/Country");
+const Country = require("../models/Country");
+const Activity = require("../models/Activity");
 const { getAllCountries, getCountriesFound } = require("../utils");
 
 
@@ -19,6 +20,22 @@ const getCountries = async (req, res) => {
   }
 }
 
+const getCountry = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const country = await Country.findByPk(id.toUpperCase(), {
+      include: Activity
+    });
+
+    res.json({ country: country ?? {} })
+
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+}
+
 module.exports = {
   getCountries,
+  getCountry,
 }
