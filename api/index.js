@@ -1,4 +1,7 @@
 require('./src/models/Country');
+require('./src/models/Activity');
+require('./src/models/CountryActivity');
+
 const server = require('./src/app');
 const sequelize = require("./src/database")
 const { loadAllCountries } = require("./src/utils/index");
