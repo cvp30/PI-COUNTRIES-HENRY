@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { getAllActivities } from "../redux/actions";
 import { ActivityCard } from "../components/ActivityCard";
 import { CountryCard } from "../components/CountryCard";
-
+import { SwiperSlide } from "swiper/react";
+import { Slider } from "../components/Slider";
 
 export const Activities = () => {
 
@@ -22,25 +23,48 @@ export const Activities = () => {
 
   return (
     <section className="w-[65rem] h-full flex flex-col gap-8">
-      <div className="w-full flex gap-3 p-2 overflow-x-auto">
+      {/* <div className="w-full flex gap-3 p-2 overflow-x-auto"> */}
+      <Slider>
         {
           activities.map(activity => {
             return (
-              <button key={activity.id} onClick={() => handleActivity(activity.countries)}>
+              <SwiperSlide key={activity.id}>
+                <button onClick={() => handleActivity(activity.countries)}>
 
-                <ActivityCard
-                  name={activity.name}
-                  difficulty={activity.difficulty}
-                  duration={activity.duration}
-                  season={activity.season}
-                />
-              </button>
+                  <ActivityCard
+                    name={activity.name}
+                    difficulty={activity.difficulty}
+                    duration={activity.duration}
+                    season={activity.season}
+                  />
+                </button>
+              </SwiperSlide>
             )
           })
         }
-      </div>
+      </Slider>
+      {/* </div> */}
 
-      <div className="w-full flex gap-3 overflow-x-scroll">
+      <Slider>
+        {
+          countriesList.map(country => {
+            return (
+              <SwiperSlide key={country.id}>
+                <CountryCard
+                  key={country.id}
+                  id={country.id}
+                  name={country.name}
+                  continent={country.continent}
+                  flag={country.flag}
+                  population={country.population}
+                />
+              </SwiperSlide>
+            )
+          })
+        }
+      </Slider>
+
+      {/* <div className="w-full flex gap-3 overflow-x-scroll">
         {
           countriesList.map(country => {
             return (
@@ -55,7 +79,7 @@ export const Activities = () => {
             )
           })
         }
-      </div>
+      </div> */}
 
     </section>
   )
