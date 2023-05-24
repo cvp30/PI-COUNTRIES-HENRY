@@ -36,5 +36,5 @@ export const validate = ({ name, difficulty, duration, idCountries }) => {
 }
 
 export const getDetailCountry = async ({ params }) => {
-    return await getAxios(`http://localhost:3001/countries/${params.id}`);
+    return await getAxios(`/countries/${params.id}`);
 }
