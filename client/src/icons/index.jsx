@@ -19,7 +19,7 @@ export const Arrow = (props) => {
 export const Next = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/3000/svg"
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"
@@ -64,6 +64,26 @@ export const Left = (props) => {
     >
       <path stroke="none" d="M0 0h24v24H0z" />
       <path d="m15 6-6 6 6 6" />
+    </svg>
+  )
+}
+
+export const NextPage = (props) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" strokeWidth="0" fill="currentColor"></path>
+      <path d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" strokeWidth="0" fill="currentColor"></path>
+    </svg>
+  )
+}
+
+export const PrevPage = (props) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-player-track-prev-filled" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"  {...props}>
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" strokeWidth="0" fill="currentColor"></path>
+      <path d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" strokeWidth="0" fill="currentColor"></path>
     </svg>
   )
 }

@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import { ActivityCard } from "../components/ActivityCard";
+import { Slider } from "../components/Slider";
+import { SwiperSlide } from "swiper/react";
 
 
 export const CountryDetail = () => {
@@ -37,23 +39,28 @@ export const CountryDetail = () => {
       <div className="w-full flex flex-col">
         <h2 className="text-sky capitalize">activities:</h2>
 
-        <div className="w-full flex gap-4 overflow-x-scroll">
+        <div className="w-full flex gap-4">
           {
             !country.activities.length ?
               <p>No Activities</p>
               :
-              country.activities.map(activity => {
-                return (
-                  <ActivityCard
-                    key={activity.id}
-                    id={activity.id}
-                    name={activity.name}
-                    difficulty={activity.difficulty}
-                    duration={activity.duration}
-                    season={activity.season}
-                  />
-                )
-              })
+              <Slider>
+                {
+                  country.activities.map(activity => {
+                    return (
+                      <SwiperSlide key={activity.id}>
+                        <ActivityCard
+                          id={activity.id}
+                          name={activity.name}
+                          difficulty={activity.difficulty}
+                          duration={activity.duration}
+                          season={activity.season}
+                        />
+                      </SwiperSlide>
+                    )
+                  })
+                }
+              </Slider>
           }
         </div>
 

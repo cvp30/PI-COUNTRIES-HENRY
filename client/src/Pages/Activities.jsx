@@ -22,8 +22,7 @@ export const Activities = () => {
   }, [activities.length, dispatch])
 
   return (
-    <section className="w-[65rem] h-full flex flex-col gap-8">
-      {/* <div className="w-full flex gap-3 p-2 overflow-x-auto"> */}
+    <section className="w-[65rem] h-full flex flex-col gap-3">
       <Slider>
         {
           activities.map(activity => {
@@ -43,7 +42,8 @@ export const Activities = () => {
           })
         }
       </Slider>
-      {/* </div> */}
+
+      <hr className="border-dashed border-sky drop-shadow-icon" />
 
       <Slider>
         {

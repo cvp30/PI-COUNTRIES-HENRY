@@ -207,7 +207,7 @@ export const ActivityForm = () => {
         <input
           type="submit"
           value="CREATE"
-          className="w-fit mt-10 px-5 py-2 rounded-xl font-bold tracking-wider hover:drop-shadow-icon hover:bg-sky hover:text-dark transition-all duration-200 ease-in-out cursor-pointer"
+          className="w-fit mt-10 px-5 py-2 rounded-xl font-bold tracking-wider hover:drop-shadow-icon hover:bg-sky hover:text-dark transition-all duration-200 ease-in-out cursor-pointer shadow-md shadow-sky"
         />
 
 
